@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '6.0.x'
           
       - name: Restore Packages
-        run: dotnet restore ./Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj
+        run: dotnet restore ./Services/Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj
         
       - name: Build
-        run: dotnet build ./Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj --configuration Release --no-restore
+        run: dotnet build ./Services/Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj --configuration Release --no-restore
         
       - name: Publish
-        run: dotnet publish ./Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj --configuration Release --no-build
+        run: dotnet publish ./Services/Wordify/Reeinvent.Wordify.API/Reeinvent.Wordify.API.csproj --configuration Release --no-build
