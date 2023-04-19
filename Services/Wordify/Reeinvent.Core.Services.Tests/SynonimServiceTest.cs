@@ -74,7 +74,7 @@ public class SynonimServiceTest
         var result = _synonymInMemoryService.GetSynonims("happy");
 
         // Assert
-        result.Should().HaveCount(3);
+        result.Should().HaveCount(2);
         result.Should().Contain("content");
         result.Should().Contain("pleased");
         result.Should().Contain("euphoric");
