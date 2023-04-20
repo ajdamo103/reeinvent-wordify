@@ -1,4 +1,4 @@
-name: Wordify Web Application Build & Deploy - Azure
+name: Wordify Web Application Build & Deploy - Azure 
 
 env:
   APP_LOCATION: "/Web/reeinvent-wordify-web"
