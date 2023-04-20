@@ -39,7 +39,6 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: $
 
     steps:
       - name: 'Deploy to Azure Web App'
@@ -47,6 +46,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: ./Web/reeinvent-wordify-web/build/
