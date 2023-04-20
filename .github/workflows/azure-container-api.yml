@@ -1,4 +1,4 @@
-name: Build and deploy a Wordify Web App to Azure
+name: Build and deploy a Wordify Web API to Azure
 
 env:
   AZURE_WEBAPP_NAME: reeinvent-wordify
