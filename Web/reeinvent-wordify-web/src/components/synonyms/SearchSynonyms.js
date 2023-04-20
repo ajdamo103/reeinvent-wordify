@@ -38,8 +38,6 @@ const SearchSynonyms = () => {
     retry: false,
   });
 
-  const showLoadingMessage = isLoading;
-
   const NoSynonymsMessage = () => (
     <div>No synonyms found for: {synonymSearchValue}</div>
   );
@@ -69,7 +67,9 @@ const SearchSynonyms = () => {
   };
 
   const SynonymsMessage = () => (
-    <div>Here are the synonyms for the word: {synonymSearchValue}</div>
+    <div>
+      Here are the synonyms for the word "<b>{synonymSearchValue}</b>"
+    </div>
   );
 
   return (
@@ -96,7 +96,7 @@ const SearchSynonyms = () => {
           <Button
             variant="primary"
             type="submit"
-            loading={showLoadingMessage}
+            loading={isLoading}
             title="Search"
           >
             Get Synonyms
@@ -104,7 +104,7 @@ const SearchSynonyms = () => {
         </Form>
       </div>
 
-      {showLoadingMessage ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
