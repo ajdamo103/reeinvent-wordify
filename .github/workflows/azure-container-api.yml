@@ -12,9 +12,6 @@ on:
 jobs:
   publish: 
     runs-on: ubuntu-latest
-    
-    env:
-      ALLOWED_DOMAINS: ${{ secrets.ALLOWED_DOMAINS }}
       
     steps: 
       - uses: actions/checkout@v3
