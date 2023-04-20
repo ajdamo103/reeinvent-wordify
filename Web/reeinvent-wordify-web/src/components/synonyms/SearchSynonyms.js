@@ -35,7 +35,7 @@ const SearchSynonyms = () => {
     parameters: [synonymSearchValue],
     queryFn: getSynonyms,
     enabled: false,
-    retry: 1,
+    retry: false,
   });
 
   const showLoadingMessage = isLoading;
