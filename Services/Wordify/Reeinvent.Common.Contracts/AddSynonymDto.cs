@@ -2,6 +2,6 @@
 
 public class AddSynonymDto
 {
-    public string Word { get; init; }
-    public string Synonym { get; init; }
+    public string Word { get; init; } = default!;
+    public string Synonym { get; init; } = default!;
 }
