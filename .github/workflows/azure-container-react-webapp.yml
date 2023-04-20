@@ -38,7 +38,7 @@ jobs:
       
     needs: build
     environment:
-      name: 'Production'
+      name: 'Production' 
 
     steps:
       - name: 'Deploy to Azure Web App'
