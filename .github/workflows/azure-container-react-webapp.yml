@@ -15,12 +15,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+        with:
+          path: Web/reeinvent-wordify-web
+        
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
             node-version: '14.x'
-            path: Web/reeinvent-wordify-web
       - name: npm install, build
         run: |
           npm install
