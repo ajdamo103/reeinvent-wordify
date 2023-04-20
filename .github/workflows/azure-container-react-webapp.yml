@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
             node-version: '14.x'
-            
+            path: Web/reeinvent-wordify-web
       - name: npm install, build
         run: |
           npm install
