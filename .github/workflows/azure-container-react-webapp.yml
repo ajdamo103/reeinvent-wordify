@@ -27,6 +27,12 @@ jobs:
         run: |
           cd ./Web/reeinvent-wordify-web
           npm run build
+          
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: ./Web/reeinvent-wordify-web/build/
 
   deploy:
     runs-on: ubuntu-latest
