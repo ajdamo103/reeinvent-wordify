@@ -17,12 +17,14 @@ synonyms.Add("pleased", "content");
 synonyms.Add("content", "pleased");
 
 Console.WriteLine("Synonyms for 'top clean':");
+
 foreach (var synonym in synonyms.GetSynonims("top clean"))
 {
     Console.WriteLine(synonym);
 }
 
 Console.WriteLine("Synonyms for 'wash':");
+
 foreach (var synonym in synonyms.GetSynonims("wash"))
 {
     Console.WriteLine(synonym);

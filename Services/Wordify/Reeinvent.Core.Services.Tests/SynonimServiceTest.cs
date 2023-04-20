@@ -16,7 +16,7 @@ public class SynonimServiceTest
         _synonymInMemoryService.Add("happy", "pleased");
         _synonymInMemoryService.Add("happy", "euphoric");
         _synonymInMemoryService.Add("euphoric", "happy");
-        _synonymInMemoryService.Add("pleased", "content");
+        _synonymInMemoryService.Add("pleaSed", "Content");
     }
 
     [Fact]
@@ -58,7 +58,7 @@ public class SynonimServiceTest
     public void GetSynonims_Should_ReturnsCorrectResult_When_WordIsContent()
     {
         // Act
-        var result = _synonymInMemoryService.GetSynonims("content");
+        var result = _synonymInMemoryService.GetSynonims("contenT  ");
 
         // Assert
         result.Should().HaveCount(3);
