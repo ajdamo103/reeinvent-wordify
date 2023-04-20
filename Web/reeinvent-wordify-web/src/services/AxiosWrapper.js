@@ -8,7 +8,7 @@ class AxiosWrapper {
 
   request = async (options) => {
     try {
-      await this.client(options);
+      return await this.client(options);
     } catch (error) {
       toast.error("Oooops. Something went wrong. Please try again. ");
     }
