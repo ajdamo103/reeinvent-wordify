@@ -34,8 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: build/
-          working-directory: ./Web/reeinvent-wordify-web
+          path: ./Web/reeinvent-wordify-web/build/
 
   deploy:
     runs-on: ubuntu-latest
