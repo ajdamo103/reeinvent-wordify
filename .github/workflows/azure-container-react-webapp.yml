@@ -25,13 +25,14 @@ jobs:
 
       - name: Build
         run: |
+          cd ./Web/reeinvent-wordify-web
           npm run build
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./Web/reeinvent-wordify-web/build/
+          path: ./Web/reeinvent-wordify-web/build
           if-no-files-found: error
 
   deploy:
