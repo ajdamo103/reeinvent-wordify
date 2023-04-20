@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Reeinvent.Common.Contracts;
 using Reeinvent.Wordify.Core.Services;
+using System.Net;
 
 namespace Reeinvent.Wordify.API.Controllers;
 
@@ -19,7 +20,12 @@ public class SynonymsController : ControllerBase
     [HttpPost]
     public ActionResult CreateSynonym([FromBody] AddSynonymDto addSynonymDto)
     {
-        _synonimService.Add(addSynonymDto.Word, addSynonymDto.Synonym);
+        bool success = _synonimService.Add(addSynonymDto.Word, addSynonymDto.Synonym);
+
+        if (!success)
+        {
+            return StatusCode((int)HttpStatusCode.InternalServerError);
+        }
 
         return Ok();
     }
